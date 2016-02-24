@@ -72,7 +72,7 @@ int reading = (analogRead(0));
    betweentwo++;
    count++;
    if(betweentwo == 2){
-   Serial.println(timecount/100);
+//   Serial.println(timecount/100);
    timecount = 0;
    betweentwo = 0;
    }
