@@ -51,9 +51,9 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-int reading = (analogRead(0));
+/*int reading = (analogRead(0));
 
-  while (reading > 500) {
+/*  while (reading > 500) {
       reading = (analogRead(0));
         //  delay(500);
           //Serial.println("a");
@@ -79,7 +79,12 @@ int reading = (analogRead(0));
    evaluate(count);
    delay(10);
  //Serial.println(count);
-  //delay(10);
+  //delay(10);*/
+ */ 
+  for(int i = 0 ; i <99; i++){
+     evaluate(i);
+     delay(500);
+  }  
  
 }
 void evaluate(int input){
@@ -136,97 +141,97 @@ void evaluate(int input){
 }
 void reset(int pin[7]){
   for(int i = 0; i<7; i++)
-    digitalWrite(pin[i],LOW); //clear all the segments of that digit
+    digitalWrite(pin[i],HIGH); //clear all the segments of that digit
    return;
 }
 // displays 0
 void zero(int pin[7]){
   reset(&pin[7]);
-  digitalWrite(pin[TOP],HIGH);
-  digitalWrite(pin[TR],HIGH);
-  digitalWrite(pin[TL],HIGH);
-  digitalWrite(pin[BL],HIGH);
-  digitalWrite(pin[BR],HIGH);
-  digitalWrite(pin[BOT],HIGH);
+  digitalWrite(pin[TOP],LOW);
+  digitalWrite(pin[TR],LOW);
+  digitalWrite(pin[TL],LOW);
+  digitalWrite(pin[BL],LOW);
+  digitalWrite(pin[BR],LOW);
+  digitalWrite(pin[BOT],LOW);
   return;
 }
 // displays 1
 void one(int pin[7]){
   reset(&pin[7]);
-  digitalWrite(pin[TR],HIGH);
-  digitalWrite(pin[BR],HIGH);
+  digitalWrite(pin[TR],LOW);
+  digitalWrite(pin[BR],LOW);
   return;
 }
 // displays 2
 void two(int pin[7]){
   reset(&pin[7]);
-  digitalWrite(pin[TOP],HIGH);
-  digitalWrite(pin[TR],HIGH);
-  digitalWrite(pin[MID],HIGH);
-  digitalWrite(pin[BL],HIGH);
-  digitalWrite(pin[BOT],HIGH);
+  digitalWrite(pin[TOP],LOW);
+  digitalWrite(pin[TR],LOW);
+  digitalWrite(pin[MID],LOW);
+  digitalWrite(pin[BL],LOW);
+  digitalWrite(pin[BOT],LOW);
   return;
 }
 // displays 3
 void three(int pin[7]){
   reset(&pin[7]);
-  digitalWrite(pin[TOP],HIGH);
-  digitalWrite(pin[TR],HIGH);
-  digitalWrite(pin[BR],HIGH);
-  digitalWrite(pin[MID],HIGH);
-  digitalWrite(pin[BOT],HIGH);
+  digitalWrite(pin[TOP],LOW);
+  digitalWrite(pin[TR],LOW);
+  digitalWrite(pin[BR],LOW);
+  digitalWrite(pin[MID],LOW);
+  digitalWrite(pin[BOT],LOW);
   return;
 }
 // displays 4
 void four(int pin[7]){
   reset(&pin[7]);
-  digitalWrite(pin[TL],HIGH);
-  digitalWrite(pin[TR],HIGH);
-  digitalWrite(pin[MID],HIGH);
-  digitalWrite(pin[BR],HIGH);
+  digitalWrite(pin[TL],LOW);
+  digitalWrite(pin[TR],LOW);
+  digitalWrite(pin[MID],LOW);
+  digitalWrite(pin[BR],LOW);
   return;
 }
 // displays 5
 void five(int pin[7]){
   reset(&pin[7]);
-  digitalWrite(pin[TOP],HIGH);
-  digitalWrite(pin[TL],HIGH);
-  digitalWrite(pin[MID],HIGH);
-  digitalWrite(pin[BR],HIGH);
-  digitalWrite(pin[BOT],HIGH);
+  digitalWrite(pin[TOP],LOW);
+  digitalWrite(pin[TL],LOW);
+  digitalWrite(pin[MID],LOW);
+  digitalWrite(pin[BR],LOW);
+  digitalWrite(pin[BOT],LOW);
   return;
 }
 void six(int pin[7]){
   reset(&pin[7]);
-  digitalWrite(pin[TOP],HIGH);
-  digitalWrite(pin[TL],HIGH);
-  digitalWrite(pin[MID],HIGH);
-  digitalWrite(pin[BL],HIGH);
-  digitalWrite(pin[BR],HIGH);
-  digitalWrite(pin[BOT],HIGH);
+  digitalWrite(pin[TOP],LOW);
+  digitalWrite(pin[TL],LOW);
+  digitalWrite(pin[MID],LOW);
+  digitalWrite(pin[BL],LOW);
+  digitalWrite(pin[BR],LOW);
+  digitalWrite(pin[BOT],LOW);
   return;
 }
 void seven(int pin[7]){
   reset(&pin[7]);
-  digitalWrite(pin[TOP],HIGH);
-  digitalWrite(pin[TR],HIGH);
-  digitalWrite(pin[BR],HIGH);
+  digitalWrite(pin[TOP],LOW);
+  digitalWrite(pin[TR],LOW);
+  digitalWrite(pin[BR],LOW);
   return;
 }
 void eight(int pin[7]){
   reset(&pin[7]);
   for(int i = 0; i < 7; i++)
-    digitalWrite(pin[i],HIGH);
+    digitalWrite(pin[i],LOW);
    return;
 }
 void nine(int pin[7]){
   reset(&pin[7]);
-  digitalWrite(pin[TOP],HIGH);
-  digitalWrite(pin[TL],HIGH);
-  digitalWrite(pin[TR],HIGH);
-  digitalWrite(pin[MID],HIGH);
-  digitalWrite(pin[BR],HIGH);
-  digitalWrite(pin[BOT],HIGH);
+  digitalWrite(pin[TOP],LOW);
+  digitalWrite(pin[TL],LOW);
+  digitalWrite(pin[TR],LOW);
+  digitalWrite(pin[MID],LOW);
+  digitalWrite(pin[BR],LOW);
+  digitalWrite(pin[BOT],LOW);
   return;
 }
 
