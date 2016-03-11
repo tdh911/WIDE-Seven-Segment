@@ -80,7 +80,7 @@ void loop() {
    delay(10);
  //Serial.println(count);
   //delay(10);*/
- */ 
+  
   for(int i = 0 ; i <99; i++){
      evaluate(i);
      delay(500);
