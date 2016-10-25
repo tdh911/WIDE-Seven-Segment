@@ -27,6 +27,7 @@ void loop()
   if(reading > THRESHOLD && lastRead < THRESHOLD){
 	count++;
     }
+    lastRead = reading;
     if(now != t){
 	Serial.print(count);
 	count = 0;
