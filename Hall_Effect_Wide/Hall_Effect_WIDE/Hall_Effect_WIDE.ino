@@ -11,6 +11,7 @@
 int count = 0;
 int timecount = 0;
  int betweentwo = 0; //looks for when two highs have been calculated
+ //sl;jfa;ls
 void setup() 
 {
   Serial.begin(9600);
@@ -19,7 +20,7 @@ void setup()
 void loop() 
 {
   int reading = (analogRead(0));
-
+  Serial.println("reading");
   while (reading > 500) {
       reading = (analogRead(0));
         //  delay(500);
@@ -45,5 +46,5 @@ void loop()
    }
   
  //Serial.println(count);
-  //delay(10);
+  delay(10);
 }
